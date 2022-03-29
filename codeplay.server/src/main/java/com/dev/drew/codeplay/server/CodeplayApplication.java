@@ -8,6 +8,7 @@ public class CodeplayApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CodeplayApplication.class, args);
+		System.out.println("*** |codeplay - running server| ***");
 	}
 
 }
