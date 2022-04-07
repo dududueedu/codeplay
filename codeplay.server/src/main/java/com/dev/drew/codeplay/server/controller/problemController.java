@@ -37,6 +37,7 @@ public class problemController {
 	}
 	
 	@DeleteMapping("/problem/{id}")
+	@ApiOperation(value="*** Deleta um problema ***")
 	public ResponseEntity<?> deleteProblemById(@PathVariable("id") String id){
 		try {
 			problemRepo.deleteById(id);
