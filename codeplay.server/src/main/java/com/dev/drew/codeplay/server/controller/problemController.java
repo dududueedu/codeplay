@@ -46,6 +46,12 @@ public class problemController {
 	
 	@DeleteMapping("/problem/{id}")
 	@ApiOperation(value="*** Deleta um problema ***")
+	@ApiResponses(value = {
+	    @ApiResponse(code = 200, message = "Problema foi deletado!"),
+	    @ApiResponse(code = 401, message = "Você não tem autorização para acessar este recurso."),
+	    @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso."),
+	    @ApiResponse(code = 204, message = "Não encontrado."),
+	})
 	public ResponseEntity<?> deleteProblemById(@PathVariable("id") String id){
 		try {
 			problemRepo.deleteById(id);
