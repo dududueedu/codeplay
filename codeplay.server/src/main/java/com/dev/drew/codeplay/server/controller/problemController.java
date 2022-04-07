@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dev.drew.codeplay.server.entity.problemEntity;
 import com.dev.drew.codeplay.server.repository.problemRepository;
 
 import io.swagger.annotations.ApiOperation;
-
-import com.dev.drew.codeplay.server.entity.problemEntity;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping(value="/api")
@@ -27,10 +28,17 @@ public class problemController {
 
 	@PostMapping("/problem")
 	@ApiOperation(value="*** Cadastra um problema ***")
+	@ApiResponses(value = {
+	    @ApiResponse(code = 201, message = "Problema foi criado!"),
+	    @ApiResponse(code = 401, message = "Você não tem autorização para acessar este recurso."),
+	    @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso."),
+	    @ApiResponse(code = 404, message = "Não encontrado."),
+	    @ApiResponse(code = 500, message = "Foi gerada uma exceção.")
+	})
 	public ResponseEntity<?> createProblem(@RequestBody problemEntity problem){
 		try {
 			problemRepo.save(problem);
-			return new ResponseEntity<problemEntity>(problem, HttpStatus.OK);
+			return new ResponseEntity<problemEntity>(problem, HttpStatus.CREATED);
 		} catch (Exception error) {
 			return new ResponseEntity<>(error.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 		}
