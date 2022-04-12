@@ -1,6 +1,7 @@
 package com.dev.drew.codeplay.server.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -72,6 +73,16 @@ public class problemController {
 			return new ResponseEntity<List<problemEntity>>(listProblems, HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>("Não há nenhum problema cadastrado!", HttpStatus.NOT_FOUND);
+		}
+	}
+	
+	public ResponseEntity<?> findProblemById(@PathVariable("id") String id){
+		Optional<problemEntity> problemOptional = problemRepo.findById(id);
+		
+		if(problemOptional.isPresent()) {
+			return new ResponseEntity<>(problemOptional.get(), HttpStatus.OK);
+		} else {
+			return new ResponseEntity<>("Não há nenhum problema cadastrado com esse ID.", HttpStatus.NOT_FOUND);
 		}
 	}
 }
