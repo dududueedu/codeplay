@@ -77,6 +77,7 @@ public class problemController {
 	}
 	
 	@GetMapping("/problem/{id}")
+	@ApiOperation(value="*** Busca um problema por ID ***")
 	public ResponseEntity<?> findProblemById(@PathVariable("id") String id){
 		Optional<problemEntity> problemOptional = problemRepo.findById(id);
 		
