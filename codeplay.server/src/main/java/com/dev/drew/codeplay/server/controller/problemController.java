@@ -65,6 +65,7 @@ public class problemController {
 	}
 
 	@GetMapping("/problem")
+	@ApiOperation(value="*** Busca todos os problemas ***")
 	public ResponseEntity<?> findAllProblems(){
 		List<problemEntity> listProblems = problemRepo.findAll();
 		if (listProblems.size() > 0) {
