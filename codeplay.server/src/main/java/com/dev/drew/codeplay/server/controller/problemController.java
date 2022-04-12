@@ -63,7 +63,8 @@ public class problemController {
 			return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
 		}
 	}
-	
+
+	@GetMapping("/problem")
 	public ResponseEntity<?> findAllProblems(){
 		List<problemEntity> listProblems = problemRepo.findAll();
 		if (listProblems.size() > 0) {
