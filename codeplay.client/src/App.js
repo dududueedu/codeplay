@@ -1,11 +1,10 @@
 import './App.css';
+import InfoProblem from './components/InfoProblem'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>test</p>
-      </header>
+        <InfoProblem />
     </div>
   );
 }

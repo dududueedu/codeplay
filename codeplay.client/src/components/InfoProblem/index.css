@@ -1,0 +1,11 @@
+.text-container {
+    grid-area: description;
+    height: 130px;
+}
+
+.text-box {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    margin-top: 20px;
+}
