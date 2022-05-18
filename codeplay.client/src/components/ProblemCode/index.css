@@ -1,0 +1,62 @@
+.text-container {
+    grid-area: description;
+    height: 130px;
+}
+
+.text-box {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.box{
+    border: #ffffff;
+    background-color: #ffffff;
+    border-radius: 5px;
+} 
+
+.gridName{
+    grid-area: gridName;
+    width: 100px;
+    height: 110px;
+    padding: 10px;
+}
+
+.gridDesc{
+    grid-area: gridDesc;
+    width: 580px;
+    height: 110px;
+    padding: 10px;
+}
+
+.gridInput{
+    grid-area: gridEntrada;
+    width: 80px;
+    height: 110px;
+    padding: 10px;
+}
+
+.gridOutput{
+    grid-area: gridSaida;
+    width: 120px;
+    height: 110px;
+    padding: 10px;
+}
+
+.information{
+    display: inline;
+}
+
+.text{
+    margin-left: 35px;
+    display: grid;
+    grid-template-areas: 'gridName gridDesc gridEntrada gridSaida' 'gridName gridDesc gridEntrada gridSaida';
+    grid-gap:10px;
+    font: 700 12px Arial;
+    color: #000000;
+}
+
+.boxTitle {
+    font-size: 20px;
+}
