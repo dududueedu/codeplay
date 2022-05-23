@@ -1,3 +1,5 @@
+import './index.css'
+
 function ProblemCode(props) {
   const renderQuest = () => {
     return (
