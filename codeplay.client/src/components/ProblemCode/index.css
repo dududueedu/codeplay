@@ -18,7 +18,7 @@
 
 .gridName{
     grid-area: gridName;
-    width: 100px;
+    width: 150px;
     height: 110px;
     padding: 10px;
 }
@@ -32,7 +32,7 @@
 
 .gridInput{
     grid-area: gridInput;
-    width: 80px;
+    width: 100px;
     height: 110px;
     padding: 10px;
 }
