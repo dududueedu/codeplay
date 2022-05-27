@@ -1,14 +1,27 @@
-.one-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+    margin: 0;
 }
 
-.content-box {
+#form-problemcode{
     display: flex;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-    height: 90px;
-    width: 700px;
-    background-color: burlywood;
+}
+
+.problemcode-container {
+    border: 20px solid rgba(148, 148, 148, 0.781);
+    background-color: #ffffff;
+    width: 300px;
+    height: 300px;
+}
+
+.textarea-problem {
+    background-color: #F8F8FC;
+    border-radius: 10px;
+    border: 1px solid #F8F8FC;
+    outline: 0;
+    min-width: 294px;
+    min-height: 240px;
+    max-width: 400px;
+    max-height: 400px;
 }
