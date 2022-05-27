@@ -4,8 +4,8 @@
 
 #form-problemcode{
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 10%;
 }
 
 .problemcode-container {
