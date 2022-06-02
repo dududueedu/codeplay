@@ -12,7 +12,7 @@
     border: 20px solid rgba(148, 148, 148, 0.781);
     background-color: #ffffff;
     width: 300px;
-    height: 300px;
+    height: 420px;
 }
 
 .textarea-problem {
@@ -21,7 +21,37 @@
     border: 1px solid #F8F8FC;
     outline: 0;
     min-width: 294px;
-    min-height: 240px;
+    min-height: 300px;
     max-width: 400px;
-    max-height: 400px;
+    max-height: 600px;
+}
+
+.area-btn {
+    display: flex;
+    width: 100%;
+}
+
+.input-problem {
+    height: 40px;
+    width: 100px;
+    margin-top: 45px;
+    margin-left: 50px;
+    font: 600 16px Poppins;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    background-color: #48B8FA;
+    color: #ffffff;
+}
+
+.btn-problem {
+    height: 40px;
+    width: 100px;
+    margin-top: 45px;
+    font: 600 16px Poppins;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    background-color: #48B8FA;
+    color: #ffffff;
 }

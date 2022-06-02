@@ -16,15 +16,17 @@ function InfoProblem(props) {
           cols="5"
           className="textarea-problem"
         />
-        <input
-          type="button"
-          onClick={(e) => e}
-          className="btn-problem"
-          value="Limpar"
-        />
-        <button type="submit" value="enviar" className="btn-problem">
-          Enviar
-        </button>
+        <div className="area-btn">
+          <input
+            type="button"
+            onClick={(e) => e}
+            className="input-problem"
+            value="Limpar"
+          />
+          <button type="submit" value="enviar" className="btn-problem">
+            Enviar
+          </button>
+        </div>
       </div>
     </form>
   );
