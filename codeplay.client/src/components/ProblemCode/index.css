@@ -13,7 +13,10 @@
 .box{
     border: #ffffff;
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 } 
 
 .gridName{
@@ -58,5 +61,5 @@
 }
 
 .boxTitle {
-    font-size: 20px;
+    font-size: 18px;
 }
