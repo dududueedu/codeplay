@@ -49,6 +49,7 @@
 
 .information{
     display: inline;
+    font: 400 16px caption;
 }
 
 .text{
@@ -61,5 +62,5 @@
 }
 
 .boxTitle {
-    font-size: 18px;
+    font: 1000 20px bold;
 }
