@@ -1,4 +1,7 @@
-function GamePlayer(pros) {
+function GamePlayer(props) {
+
+    const SPRITE_SIZE = 20; // TESTING...
+    const walkSprite = './../../setupTests.js'; // TESTING...
 
     function getPixel(step) {
         const pixel = step;
@@ -6,7 +9,6 @@ function GamePlayer(pros) {
     }
 
     function getDirectPixel(direct) {
-        const SPRITE_SIZE = 20; // TESTING...
         switch (direct) {
             case 1:
                 return `${SPRITE_SIZE*0}px`
@@ -23,6 +25,22 @@ function GamePlayer(pros) {
 
     getPixel();
     getDirectPixel();
+
+    return (
+        <div
+            style = {{
+                position: 'absolute',
+                top: props.position[1],
+                left: props.position[0],
+                width: `${SPRITE_SIZE}px`,
+                height: `${SPRITE_SIZE}px`,
+                backgroundImage: `url('${walkSprite}')`,
+                backgroundPosition: `${getPixel(props.step)} ${getDirectPixel(props.direct)}`,
+                backgroundRepeat: 'no-repeat'
+            }}
+        >
+        </div>
+    )
 }
 
 export default GamePlayer;
