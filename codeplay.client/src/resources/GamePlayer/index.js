@@ -1,9 +1,7 @@
 import walkCharacter from '../../data/Characters/Student_11.png'
-import {NORTH, SOUTH, EAST, WEST} from '../../config/gameConstants'
+import {NORTH, SOUTH, EAST, WEST, SPRITE_SIZE} from '../../config/gameConstants'
 
 function GamePlayer(props) {
-
-    const SPRITE_SIZE = 20; // TESTING...
 
     function getPixel(step) {
         const pixel = step;
