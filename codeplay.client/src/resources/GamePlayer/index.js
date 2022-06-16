@@ -1,7 +1,8 @@
+import walkCharacter from '../../data/Characters/Student_11.png'
+
 function GamePlayer(props) {
 
     const SPRITE_SIZE = 20; // TESTING...
-    const walkSprite = './../../setupTests.js'; // TESTING...
 
     function getPixel(step) {
         const pixel = step;
@@ -34,7 +35,7 @@ function GamePlayer(props) {
                 left: props.position[0],
                 width: `${SPRITE_SIZE}px`,
                 height: `${SPRITE_SIZE}px`,
-                backgroundImage: `url('${walkSprite}')`,
+                backgroundImage: `url('${walkCharacter}')`,
                 backgroundPosition: `${getPixel(props.step)} ${getDirectPixel(props.direct)}`,
                 backgroundRepeat: 'no-repeat'
             }}
