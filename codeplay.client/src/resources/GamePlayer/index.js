@@ -1,4 +1,5 @@
 import walkCharacter from '../../data/Characters/Student_11.png'
+import {NORTH, SOUTH, EAST, WEST} from '../../config/gameConstants'
 
 function GamePlayer(props) {
 
@@ -11,14 +12,14 @@ function GamePlayer(props) {
 
     function getDirectPixel(direct) {
         switch (direct) {
-            case 1:
-                return `${SPRITE_SIZE*0}px`
-            case 2:
-                return `-${SPRITE_SIZE*3}px`
-            case 3:
-                return `-${SPRITE_SIZE}px`
-            case 4:
-                return `-${SPRITE_SIZE*2}px`
+            case NORTH:
+                return `-${SPRITE_SIZE*3}px`;
+            case SOUTH:
+                return `${SPRITE_SIZE*0}px`;
+            case EAST:
+                return `-${SPRITE_SIZE*2}px`;
+            case WEST:
+                return `-${SPRITE_SIZE}px`;
             default:
                 console.log('INVALID DIRECTING');
         }
