@@ -6,3 +6,8 @@ export const WEST = 'WEST';
 
 // tamanho do sprite
 export const SPRITE_SIZE = 32;
+
+// constants of maps
+export const PRO = 1 
+export const CLN = 2 // colision
+export const PCN = 3 // problem colision
