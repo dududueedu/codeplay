@@ -55,3 +55,8 @@
     background-color: #48B8FA;
     color: #ffffff;
 }
+
+.text-problem {
+    display: flex;
+    justify-content: center;
+}
