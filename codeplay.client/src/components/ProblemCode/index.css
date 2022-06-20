@@ -34,7 +34,7 @@
 .input-problem {
     height: 40px;
     width: 100px;
-    margin-top: 45px;
+    margin-top: 10px;
     margin-left: 50px;
     font: 600 16px Poppins;
     text-decoration: none;
@@ -47,7 +47,7 @@
 .btn-problem {
     height: 40px;
     width: 100px;
-    margin-top: 45px;
+    margin-top: 10px;
     font: 600 16px Poppins;
     text-decoration: none;
     border: 2px solid #ffffff;
@@ -59,4 +59,8 @@
 .text-problem {
     display: flex;
     justify-content: center;
+}
+
+.text-problem-p {
+    margin: 14px;
 }
