@@ -1,4 +1,4 @@
-import {PRO, CLN} from '../../config/gameConstants';
+import {PRO, CLN} from '../../../config/gameConstants';
 
 export const gamemap = [
     [PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO,CLN,CLN,CLN,CLN,CLN,PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO,PRO],
