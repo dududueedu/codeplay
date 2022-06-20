@@ -23,9 +23,6 @@ function GamePlayer(props) {
         }
     }
 
-    getPixel();
-    getDirectPixel();
-
     return (
         <div
             style = {{
