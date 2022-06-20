@@ -5,8 +5,8 @@ import ProblemCode from './components/ProblemCode';
 function App() {
   return (
     <div className="App">
-        <InfoProblem />
         <ProblemCode />
+        <InfoProblem />
     </div>
   );
 }
