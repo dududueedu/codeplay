@@ -9,7 +9,7 @@
 }
 
 .problemcode-container {
-    border: 15px solid rgba(148, 148, 148, 0.781);
+    border: 12px solid rgba(148, 148, 148, 0.781);
     border-radius: 5px;
     background-color: #ffffff;
     width: 300px;
@@ -18,8 +18,7 @@
 
 .textarea-problem {
     background-color: #F8F8FC;
-    border-radius: 10px;
-    border: 1px solid #F8F8FC;
+    border: none;
     outline: 0;
     min-width: 294px;
     min-height: 300px;
