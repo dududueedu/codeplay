@@ -6,8 +6,8 @@
 .my-div {
     position: fixed;
     border-radius: 12px;
-    width: 720px;
+    width: 680px;
     height: 440px;
     background-color: rgba(220, 20, 60, 0.445);
-    margin-left: 10%;
+    margin-left: 12%;
 }
