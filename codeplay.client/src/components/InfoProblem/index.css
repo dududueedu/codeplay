@@ -21,28 +21,28 @@
 
 .gridName{
     grid-area: gridName;
-    width: 150px;
+    width: 200px;
     height: 110px;
     padding: 10px;
 }
 
 .gridDesc{
     grid-area: gridDesc;
-    width: 580px;
+    width: 630px;
     height: 110px;
     padding: 10px;
 }
 
 .gridInput{
     grid-area: gridInput;
-    width: 100px;
+    width: 150px;
     height: 110px;
     padding: 10px;
 }
 
 .gridOutput{
     grid-area: gridOutput;
-    width: 120px;
+    width: 170px;
     height: 110px;
     padding: 10px;
 }
