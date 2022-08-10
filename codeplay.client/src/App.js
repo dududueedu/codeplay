@@ -1,12 +1,14 @@
-import './App.css';
-import InfoProblem from './components/InfoProblem'
-import ProblemCode from './components/ProblemCode';
+import "./App.css";
+import InfoProblem from "./components/InfoProblem";
+import ProblemCode from "./components/ProblemCode";
+import GameMap from "./resources/GameMap";
 
 function App() {
   return (
     <div className="App">
-        <ProblemCode />
-        <InfoProblem />
+      <GameMap />
+      <ProblemCode />
+      <InfoProblem />
     </div>
   );
 }

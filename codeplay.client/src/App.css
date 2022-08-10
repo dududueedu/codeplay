@@ -4,6 +4,7 @@
 
 .App {
   min-height: 100vh;
-  position: relative;
+  min-width: 100vw;
+  position: fixed;
   background-color: rgba(127, 255, 212, 0.562);
 }
