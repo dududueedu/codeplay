@@ -3,12 +3,6 @@
     top: 0;
 }
 
-.my-div {
-    position: fixed;
-    border-radius: 12px;
-    width: 680px;
-    height: 440px;
-    background-color: rgba(220, 20, 60, 0.445);
-    margin-left: 12%;
-    margin-top: 40px;
+.map{
+    background-image: url('../../data/Map/960x640_32px.png');
 }

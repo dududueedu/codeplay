@@ -2,7 +2,7 @@ import "./index.css";
 
 function ProblemCode(props) {
   const infoPlaceholder =
-    "Ao ler a entrada, use sempre input(), sem nenhum valor dentro dos parênteses. Exemplo: int(input()) para ler um número e convertê-lo para inteiro.\nSeu programa não deve conter acentos. Caso contrário, o sistema irá apontar erro em sua solução.\nAs saídas do seu programa devem seguir o padrão exibido em 'Saída'\n\nDivirta-se, bom jogo!";
+    "Para fazer uma leitura do teclado, use sempre input(), sem nenhum valor nos parênteses.\nExemplo: int(input()) para ler um número e convertê-lo para inteiro.\n\nSeu programa não deve conter acentos.\nAs saídas do seu programa devem seguir o padrão exibido em 'Saída'.\n\nDivirta-se, bom jogo!";
 
   return (
     <form id="form-problemcode">

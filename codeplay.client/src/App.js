@@ -1,15 +1,19 @@
 import "./App.css";
 import InfoProblem from "./components/InfoProblem";
 import ProblemCode from "./components/ProblemCode";
-import GameMap from "./resources/GameMap";
+import GameSpace from "./resources/GameSpace";
 
 function App() {
   return (
-    <div className="App">
-      <GameMap />
-      <ProblemCode />
+    <>
+      <div className="master-container">
+        <div className="ff-container">
+          <ProblemCode />
+        </div>
+        <GameSpace />
+      </div>
       <InfoProblem />
-    </div>
+    </>
   );
 }
 

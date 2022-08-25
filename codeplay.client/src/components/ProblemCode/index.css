@@ -2,29 +2,28 @@
     margin: 0;
 }
 
-#form-problemcode{
+#form-problemcode {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 12%;
-    margin-top: 40px;
 }
 
 .problemcode-container {
-    border: 12px solid rgba(148, 148, 148, 0.781);
+    border: 7px solid rgba(152, 190, 35);
     border-radius: 5px;
     background-color: #ffffff;
-    width: 300px;
-    height: 420px;
+    width: 404px;
+    height: 633px;
 }
 
 .textarea-problem {
     background-color: #F8F8FC;
     border: none;
     outline: 0;
-    min-width: 294px;
-    min-height: 300px;
-    max-width: 400px;
-    max-height: 600px;
+    min-width: 360px;
+    min-height: 440px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }
 
 .area-btn {
@@ -35,33 +34,37 @@
 .input-problem {
     height: 40px;
     width: 100px;
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 100px;
     font: 600 16px Poppins;
     text-decoration: none;
     border: 2px solid #ffffff;
     border-radius: 25px;
-    background-color: #48B8FA;
+    background-color: #98be23;
     color: #ffffff;
 }
 
 .btn-problem {
     height: 40px;
     width: 100px;
-    margin-top: 10px;
+    margin-top: 25px;
     font: 600 16px Poppins;
     text-decoration: none;
     border: 2px solid #ffffff;
     border-radius: 25px;
-    background-color: #48B8FA;
+    background-color: #98be23;
     color: #ffffff;
 }
 
 .text-problem {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .text-problem-p {
-    margin: 14px;
+    margin: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
 }
