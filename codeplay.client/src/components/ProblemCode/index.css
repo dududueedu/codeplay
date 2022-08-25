@@ -11,7 +11,7 @@
     border-radius: 5px;
     background-color: #ffffff;
     width: 404px;
-    height: 633px;
+    height: 627px;
 }
 
 .textarea-problem {
@@ -33,13 +33,13 @@
 
 .input-problem {
     height: 40px;
-    width: 100px;
-    margin-top: 25px;
+    width: 120px;
+    margin-top: 20px;
     margin-right: 20px;
-    margin-left: 100px;
+    margin-left: 75px;
     font: 600 16px Poppins;
     text-decoration: none;
-    border: 2px solid #ffffff;
+    border: 0px solid #ffffff;
     border-radius: 25px;
     background-color: #98be23;
     color: #ffffff;
@@ -49,11 +49,11 @@
 
 .btn-problem {
     height: 40px;
-    width: 100px;
-    margin-top: 25px;
+    width: 120px;
+    margin-top: 20px;
     font: 600 16px Poppins;
     text-decoration: none;
-    border: 2px solid #ffffff;
+    border: 0px solid #ffffff;
     border-radius: 25px;
     background-color: #98be23;
     color: #ffffff;

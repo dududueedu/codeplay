@@ -7,7 +7,7 @@ function ProblemCode(props) {
   return (
     <form id="form-problemcode">
       <div className="problemcode-container">
-        <div className="text-problem"><p className="text-problem-p"> CODEPLAY: </p></div>
+        <div className="text-problem"><p className="text-problem-p"> CODEPLAY </p></div>
         <textarea
           onChange={(e) => e}
           type="textarea"
