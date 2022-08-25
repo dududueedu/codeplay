@@ -43,6 +43,8 @@
     border-radius: 25px;
     background-color: #98be23;
     color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
 }
 
 .btn-problem {
@@ -55,6 +57,8 @@
     border-radius: 25px;
     background-color: #98be23;
     color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
 }
 
 .text-problem {

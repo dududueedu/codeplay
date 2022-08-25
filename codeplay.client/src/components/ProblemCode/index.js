@@ -21,10 +21,10 @@ function ProblemCode(props) {
             type="button"
             onClick={(e) => e}
             className="input-problem"
-            value="Limpar"
+            value="LIMPAR"
           />
           <button type="submit" value="enviar" className="btn-problem">
-            Enviar
+            ENVIAR
           </button>
         </div>
       </div>

@@ -9,9 +9,7 @@ function GameSpace(props) {
           position: "relative",
           width: `${MAP_WIDTH}px`,
           height: `${MAP_HEIGHT}px`,
-          outline: "0px",
-          borderStyle: "solid",
-          borderColor: "white",
+          outline: "0px"
         }}
         tabIndex="-1"
       >
