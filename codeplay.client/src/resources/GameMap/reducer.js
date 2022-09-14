@@ -5,6 +5,7 @@ const initialState = {
 }
 
 const mapReducer = (state=initialState, action) => {
+    console.log("aqui: "+action.type)
     switch(action.type) {
         case SET_TILES:
             return {
