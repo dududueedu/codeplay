@@ -7,6 +7,8 @@ import {
   CLN,
 } from "../../config/gameConstants";
 import "./index.css";
+import { setTiles } from "./environment";
+import { connect } from "react-redux"
 
 function MapTile(props) {
   function getTileEvent(type) {
@@ -55,12 +57,27 @@ function GameMap(props) {
         height: `${MAP_HEIGHT}px`,
       }}
     >
+      {props.tiles.map((row, index) => {
+        return <MapRow tiles={row} key={index} />;
+      })}
     </div>
   );
 }
 
-export default GameMap;
+function mapStateToProps(state) {
+  return {
+    tiles: state.map.tiles,
+    position: state.player.position,
+  };
+}
 
-/*{props.tiles.map((row, index) => {
-  return <MapRow tiles={row} key={index} />;
-})}*/
+function mapDispatchToProps(dispatch) {
+  return {
+    setTiles(tiles) {
+      const action = setTiles(tiles);
+      dispatch(action);
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GameMap);
