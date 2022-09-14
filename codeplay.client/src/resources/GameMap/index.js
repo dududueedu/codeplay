@@ -67,7 +67,6 @@ function GameMap(props) {
 function mapStateToProps(state) {
   return {
     tiles: state.map.tiles,
-    position: state.player.position,
   };
 }
 

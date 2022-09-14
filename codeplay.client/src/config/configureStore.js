@@ -1,9 +1,9 @@
-import { applyMiddleware, compose, createStore, combineReducers } from "redux";
+import { applyMiddleware, compose, combineReducers } from "redux";
 import thunkMiddleware from "redux-thunk";
-
+import { configureStore } from '@reduxjs/toolkit';
 import mapReducer from "../resources/GameMap/reducer";
 
-export default function configureStore(preloadedState) {
+export default function confiStore(preloadedState) {
   const rootReducer = combineReducers({
     map: mapReducer,
   });
@@ -14,7 +14,7 @@ export default function configureStore(preloadedState) {
   const enhancers = [middlewareEnhancer, mapReducer];
   const composedEnhancers = compose(...enhancers);
 
-  const store = createStore(rootReducer, preloadedState, composedEnhancers);
+  const store = configureStore({reducer: rootReducer}, preloadedState, composedEnhancers);
 
   return store;
 }
