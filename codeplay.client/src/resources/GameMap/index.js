@@ -5,6 +5,8 @@ import {
   PCN,
   PRO,
   CLN,
+  GRS,
+  CHS
 } from "../../config/gameConstants";
 import "./index.css";
 import { setTiles } from "./environment";

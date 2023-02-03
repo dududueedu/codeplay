@@ -16,3 +16,7 @@ export const MAP_HEIGHT = 20 * SPRITE_SIZE;
 export const MAP_WIDTH = 30 * SPRITE_SIZE;
 
 export const SET_TILES = 'ADD_TILES';
+
+// positions map
+export const GRS = 0
+export const CHS = 3
