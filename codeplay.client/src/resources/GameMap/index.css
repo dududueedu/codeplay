@@ -6,3 +6,8 @@
 .map{
     background-image: url('../../data/Map/960x640_32px.png');
 }
+
+.tile {
+    z-index: 0;
+    display: inline-flex;
+}
