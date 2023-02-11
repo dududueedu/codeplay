@@ -12,7 +12,7 @@ body {
 .master-container {
   display: grid;
   grid-template-areas: 'game game code''game game code''description description code';
-  grid-gap: 10px;
+  grid-gap: 0px;
   margin: 10px;
   zoom: 73%;
   justify-content: center;
