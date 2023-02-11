@@ -18,5 +18,9 @@ export const MAP_WIDTH = 30 * SPRITE_SIZE;
 export const SET_TILES = 'ADD_TILES';
 
 // positions map
-export const GRS = 0
-export const CHS = 3
+export const GRS = 0;
+export const CHS = 3;
+
+// events
+export const MOVE_PLAYER = 'MOVE_PLAYER';
+export const TOTAL_STEPS = 3;
