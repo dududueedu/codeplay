@@ -4,7 +4,7 @@
 }
 
 .map{
-    background-image: url('../../data/Map/960x640_32px.png');
+    background-image: url('../../data/Map/gameplay.png'); 
 }
 
 .tile {
