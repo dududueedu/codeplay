@@ -19,16 +19,9 @@
     align-items: center;
 } 
 
-.gridName{
-    grid-area: gridName;
-    width: 200px;
-    height: 110px;
-    padding: 10px;
-}
-
 .gridDesc{
     grid-area: gridDesc;
-    width: 630px;
+    width: 590px;
     height: 110px;
     padding: 10px;
 }
@@ -54,7 +47,7 @@
 
 .text{
     display: grid;
-    grid-template-areas: 'gridName gridDesc gridInput gridOutput' 'gridName gridDesc gridInput gridOutput';
+    grid-template-areas: 'gridDesc gridInput gridOutput' 'gridDesc gridInput gridOutput';
     grid-gap: 10px;
 }
 

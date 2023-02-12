@@ -4,10 +4,6 @@ function InfoProblem(props) {
   const renderQuest = () => {
     return (
       <div className="text">
-        <div className="gridName box">
-          <p className="boxTitle"> NOME </p>
-          <span className="information">nome do problema</span>
-        </div>
         <div className="gridDesc box">
           <p className="boxTitle"> DESCRIÇÃO </p>
           <span className="information">Descrição do problema</span>
