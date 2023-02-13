@@ -7,12 +7,12 @@
 }
 
 .problemcode-container {
-    border: 7px solid rgba(152, 190, 35);
-    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
     background-color: #ffffff;
     width: 404px;
-    height: 627px;
-    margin-left: 10px;
+    height: 640px;
+    margin-left: 40px;
 }
 
 .textarea-problem {
