@@ -1,5 +1,6 @@
 import { MAP_HEIGHT, MAP_WIDTH,  } from "../../config/gameConstants";
 import GameMap from "../GameMap";
+import GamePlayer from "../GamePlayer";
 import { tiles } from "../GameMap/Map/index";
 import { setTiles } from "../GameMap/environment";
 import { connect } from "react-redux"
@@ -43,6 +44,7 @@ function GameSpace(props) {
     }
     >
       <GameMap />
+      <GamePlayer />
     </div>
   );
 }
@@ -50,6 +52,7 @@ function GameSpace(props) {
 function mapStateToProps(state) {
   return {
     tiles: state.map.tiles,
+    position: state.player.position
   };
 }
 

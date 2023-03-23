@@ -1,5 +1,6 @@
 import walkCharacter from '../../data/Characters/Student_11.png'
 import {NORTH, SOUTH, EAST, WEST, SPRITE_SIZE} from '../../config/gameConstants'
+import { connect } from 'react-redux'
 
 function GamePlayer(props) {
 
@@ -8,8 +9,8 @@ function GamePlayer(props) {
         return `-${pixel}px`;
     }
 
-    function getDirectPixel(direct) {
-        switch (direct) {
+    function getDirectPixel(facing) {
+        switch (facing) {
             case NORTH:
                 return `-${SPRITE_SIZE*3}px`;
             case SOUTH:
@@ -32,7 +33,7 @@ function GamePlayer(props) {
                 width: `${SPRITE_SIZE}px`,
                 height: `${SPRITE_SIZE}px`,
                 backgroundImage: `url('${walkCharacter}')`,
-                backgroundPosition: `${getPixel(props.step)} ${getDirectPixel(props.direct)}`,
+                backgroundPosition: `${getPixel(props.step)} ${getDirectPixel(props.facing)}`,
                 backgroundRepeat: 'no-repeat'
             }}
         >
@@ -40,4 +41,12 @@ function GamePlayer(props) {
     )
 }
 
-export default GamePlayer;
+function mapStateToProps(state) {
+    return {
+        position: state.player.position,
+        facing: state.player.facing,
+        step: state.player.step
+    }
+}
+
+export default connect(mapStateToProps)(GamePlayer);
