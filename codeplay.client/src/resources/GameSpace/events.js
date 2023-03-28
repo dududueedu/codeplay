@@ -42,7 +42,7 @@ export function moveToPosition(direction) {
     
     function attemptMove(direction) { // tenta mover o personagem (caso o local não seja uma colisão)
         const oldPos = store.getState().player.position
-        console.log("attemptMove: OLDPOS", oldPos)
+        //console.log("attemptMove: OLDPOS", oldPos)
         const newPos = getNewPosition(direction)
         return (
             isPositionInsideBoundaries(newPos)
