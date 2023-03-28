@@ -40,8 +40,9 @@ export function moveToPosition(direction) {
         return false
     }
     
-    function attemptMove(direction) { // tenta mover o personagem (caso o local não seja um obstáculo ou fora do mapa)
+    function attemptMove(direction) { // tenta mover o personagem (caso o local não seja uma colisão)
         const oldPos = store.getState().player.position
+        console.log("attemptMove: OLDPOS", oldPos)
         const newPos = getNewPosition(direction)
         return (
             isPositionInsideBoundaries(newPos)
@@ -60,7 +61,7 @@ export function moveToPosition(direction) {
         type: MOVE_PLAYER,
         payload: {
             position: attemptMove(direction),
-            direct: direction,
+            facing: direction,
             step: advanceStep()
         }
     }
