@@ -24,3 +24,6 @@ export const CHS = 3;
 // events
 export const MOVE_PLAYER = 'MOVE_PLAYER';
 export const TOTAL_STEPS = 3;
+
+// view problem
+export const QUEST = 'QUEST';
