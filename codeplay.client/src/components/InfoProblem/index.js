@@ -4,6 +4,8 @@ import { listProblems } from '../../services/api'
 import { connect } from 'react-redux'
 import { dispatchProblem } from './dispatchProblem'
 import { QUEST } from '../../config/gameConstants'
+import Swal from 'sweetalert2'
+import gameOver from '../../data/Map/game-over.png'
 
 function InfoProblem(props) {
 
@@ -25,6 +27,43 @@ function InfoProblem(props) {
       console.log(error);
     });
   }, [])
+
+  useEffect(() => {
+    if(
+      (props.position[0] === 64 && props.position[1] === 96) ||
+      (props.position[0] === 96 && props.position[1] === 64) ||
+      (props.position[0] === 128 && props.position[1] === 64)||
+      (props.position[0] === 160 && props.position[1] === 64)|| 
+      (props.position[0] === 192 && props.position[1] === 64)||
+      (props.position[0] === 96 && props.position[1] === 128)||
+      (props.position[0] === 128 && props.position[1] === 128)||
+      (props.position[0] === 160 && props.position[1] === 128)||
+      (props.position[0] === 224 && props.position[1] === 96)||
+      (props.position[0] === 192 && props.position[1] === 128)
+    ) {
+        Swal.fire({
+          imageUrl: gameOver,
+          imageWidth: 75,
+          imageHeight: 75,
+          color: '#98be23',
+          title: 'Você deseja tentar novamente?',
+          showDenyButton: true,
+          confirmButtonColor: '#98be23',
+          showCancelButton: false,
+          confirmButtonText: 'Sim, vou tentar.',
+          denyButtonText: `Não!`,
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire('Ok. Boa sorte!', '', 'success');
+            setTimeout(() => {
+              window.location.reload();
+            }, "3000");
+          } else if (result.isDenied) {
+            Swal.fire('Ok. Até mais!', 'Não desamine, estude e volte depois ;)', 'info');
+          }
+        });
+      }
+  }, [props.position])
 
   useEffect(() => {
     let currentProblem = null;
