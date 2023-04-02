@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { listProblems } from '../../services/api'
 import { connect } from 'react-redux'
 import { dispatchProblem } from './dispatchProblem'
-import { QUEST } from '../../config/gameConstants'
+import { EAST, QUEST, SOUTH, WEST, NORTH } from '../../config/gameConstants'
 import Swal from 'sweetalert2'
 import gameOver from '../../data/Map/game-over.png'
 
@@ -30,16 +30,23 @@ function InfoProblem(props) {
 
   useEffect(() => {
     if(
-      (props.position[0] === 64 && props.position[1] === 96) ||
-      (props.position[0] === 96 && props.position[1] === 64) ||
-      (props.position[0] === 128 && props.position[1] === 64)||
-      (props.position[0] === 160 && props.position[1] === 64)|| 
-      (props.position[0] === 192 && props.position[1] === 64)||
-      (props.position[0] === 96 && props.position[1] === 128)||
-      (props.position[0] === 128 && props.position[1] === 128)||
-      (props.position[0] === 160 && props.position[1] === 128)||
-      (props.position[0] === 224 && props.position[1] === 96)||
-      (props.position[0] === 192 && props.position[1] === 128)
+      (props.position[0] === 64 && props.position[1] === 96 && props.facing === EAST) ||
+      (props.position[0] === 96 && props.position[1] === 64 && props.facing === SOUTH) ||
+      (props.position[0] === 128 && props.position[1] === 64 && props.facing === SOUTH)||
+      (props.position[0] === 160 && props.position[1] === 64 && props.facing === SOUTH)|| 
+      (props.position[0] === 192 && props.position[1] === 64 && props.facing === SOUTH)||
+      (props.position[0] === 96 && props.position[1] === 128 && props.facing === NORTH)||
+      (props.position[0] === 128 && props.position[1] === 128 && props.facing === NORTH)||
+      (props.position[0] === 160 && props.position[1] === 128 && props.facing === NORTH)||
+      (props.position[0] === 224 && props.position[1] === 96 && props.facing === WEST)||
+      (props.position[0] === 192 && props.position[1] === 128 && props.facing === NORTH)||
+      (props.position[0] === 288 && props.position[1] === 320)||
+      (props.position[0] === 672 && props.position[1] === 160)||
+      (props.position[0] === 352 && props.position[1] === 480)||
+      (props.position[0] === 832 && props.position[1] === 352)||
+      (props.position[0] === 832 && props.position[1] === 288)||
+      (props.position[0] === 800 && props.position[1] === 320)||
+      (props.position[0] === 864 && props.position[1] === 320)
     ) {
         Swal.fire({
           imageUrl: gameOver,
@@ -63,7 +70,7 @@ function InfoProblem(props) {
           }
         });
       }
-  }, [props.position])
+  }, [props])
 
   useEffect(() => {
     let currentProblem = null;
@@ -115,7 +122,8 @@ function mapStateToProps(state) {
   return {
       tiles: state.map.tiles,
       position: state.player.position,
-      id: state.player.id
+      id: state.player.id,
+      facing: state.player.facing
   }
 }
 
