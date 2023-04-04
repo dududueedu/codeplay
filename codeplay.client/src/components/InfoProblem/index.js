@@ -82,7 +82,7 @@ function InfoProblem(props) {
         (props.position[0] === 192 && props.position[1] === 608) ||
         (props.position[0] === 608 && props.position[1] === 608)
       ) {
-          if(props.facing === NORTH){
+          if(props.facing === NORTH) {
             const random = Math.round(Math.random() * questList.length);
             currentProblem = questList[random];
           }
@@ -138,4 +138,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(InfoProblem)
+export default connect(mapStateToProps, mapDispatchToProps)(InfoProblem);
