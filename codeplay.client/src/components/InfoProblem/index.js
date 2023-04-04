@@ -76,11 +76,11 @@ function InfoProblem(props) {
     let currentProblem = null;
 
     if(
-        (props.position[0] === 512 && props.position[1] === 160 && props.facing === NORTH) ||
-        (props.position[0] === 160 && props.position[1] === 352 && props.facing === NORTH) ||
-        (props.position[0] === 576 && props.position[1] === 416 && props.facing === NORTH) ||
-        (props.position[0] === 192 && props.position[1] === 608 && props.facing === NORTH) ||
-        (props.position[0] === 608 && props.position[1] === 608 && props.facing === NORTH)
+        ((props.position[0] === 512 && props.position[1] === 160) && props.facing === NORTH) ||
+        ((props.position[0] === 160 && props.position[1] === 352) && props.facing === NORTH) ||
+        ((props.position[0] === 576 && props.position[1] === 416) && props.facing === NORTH) ||
+        ((props.position[0] === 192 && props.position[1] === 608) && props.facing === NORTH) ||
+        ((props.position[0] === 608 && props.position[1] === 608) && props.facing === NORTH)
       ) {
           const random = Math.round(Math.random() * questList.length);
           currentProblem = questList[random];
