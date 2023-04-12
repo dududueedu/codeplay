@@ -4,7 +4,7 @@ export function listProblems() {
     return (
         axios({
             method: "GET",
-            url: `http://localhost:8080/api/problem`,
+            url: `https://teste-game-production.up.railway.app/api/problem`,
             headers: { "token": "all problems" }
         })
     );
