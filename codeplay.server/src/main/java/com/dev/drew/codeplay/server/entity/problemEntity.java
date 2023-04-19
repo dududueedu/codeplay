@@ -3,7 +3,7 @@ package com.dev.drew.codeplay.server.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "problem")
+@Document(collection = "problems")
 public class problemEntity {
 	
 	@Id
