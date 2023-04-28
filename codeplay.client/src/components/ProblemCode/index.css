@@ -48,6 +48,10 @@
     font-size: large;
 }
 
+.input-problem:hover{
+    background-color: #008bccd8;
+  }
+
 .btn-problem {
     height: 40px;
     width: 120px;
@@ -60,6 +64,7 @@
     color: #ffffff;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: large;
+    padding-left: 27px;
 }
 
 .text-problem {

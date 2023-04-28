@@ -4,7 +4,7 @@ export function listProblems() {
     return (
         axios({
             method: "GET",
-            url: `https://teste-game-production.up.railway.app/api/problem`,
+            url: `https://cp-game.onrender.com/api/problem`,
             headers: { "token": "all problems" }
         })
     );
