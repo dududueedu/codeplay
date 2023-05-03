@@ -23,10 +23,10 @@ function ProblemCode(props) {
     console.log("meu response: ", response);
     const submissionResult = response.data
     console.log("submissionResult: ", submissionResult)
-    if (submissionResult.result) {
+    if (submissionResult.result === 'true') {
         console.log(submissionResult);
         alert("Sua solução foi aprovada! PARABÉNS!");
-    } else 
+    } else
         alert("Erro. Motivo:\n\n" + submissionResult.error);
   }
 
