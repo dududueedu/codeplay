@@ -2,6 +2,9 @@ import "./index.css";
 import { useState } from "react";
 import { submission } from "../../services/api/index"
 import { connect } from 'react-redux'
+import Swal from 'sweetalert2'
+import Star from '../../data/Quizz/star.png'
+import Sad from '../../data/Quizz/sad.png'
 
 function ProblemCode(props) {
   const infoPlaceholder =
@@ -20,14 +23,32 @@ function ProblemCode(props) {
     }
 
     const response = await submission(jsonData);
-    console.log("meu response: ", response);
     const submissionResult = response.data
-    console.log("submissionResult: ", submissionResult)
     if (submissionResult.result === 'true') {
-        console.log(submissionResult);
-        alert("Sua solução foi aprovada! PARABÉNS!");
-    } else
-        alert("Erro. Motivo:\n\n" + submissionResult.error);
+      Swal.fire({
+        imageUrl: Star,
+        imageWidth: 75,
+        imageHeight: 75,
+        color: '#98be23',
+        title: 'PARABÉNS!',
+        text: 'Sua solução foi aprovada!',
+        confirmButtonColor: '#98be23',
+        showCancelButton: false,
+        confirmButtonText: 'Obrigado!'
+      });
+    } else {
+      Swal.fire({
+        imageUrl: Sad,
+        imageWidth: 75,
+        imageHeight: 75,
+        color: '#ff0000',
+        title: 'ERRO',
+        text: 'Dica:\n\n'+submissionResult.error,
+        confirmButtonColor: '#98be23',
+        showCancelButton: false,
+        confirmButtonText: 'Poxa',
+      });
+    }
   }
 
   return (
