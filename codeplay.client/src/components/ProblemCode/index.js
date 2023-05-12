@@ -18,8 +18,7 @@ function ProblemCode(props) {
 
     const jsonData = {
       codeInput: code,  
-      problem_id: currentProblem.id, 
-      language_id: null
+      problem_id: currentProblem.id
     }
 
     const response = await submission(jsonData);
