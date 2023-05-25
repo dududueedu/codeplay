@@ -40,26 +40,19 @@ function InfoProblem(props) {
           imageUrl: gameOver,
           imageWidth: 75,
           imageHeight: 75,
-          color: '#98be23',
-          title: 'Você deseja tentar novamente?',
-          showDenyButton: true,
+          color: '#dc3741',
+          title: 'Você não poderia colidir com o inimigo',
+          showDenyButton: false,
           confirmButtonColor: '#98be23',
           showCancelButton: false,
-          confirmButtonText: 'Sim, vou tentar.',
-          denyButtonText: `Não!`,
+          confirmButtonText: 'Eita!',
         }).then((result) => {
           if (result.isConfirmed) {
-            Swal.fire('Ok. Boa sorte!', '', 'success');
             setTimeout(() => {
-              window.location.reload();
-            }, "3000");
-          } else if (result.isDenied) {
-            Swal.fire('Ok. Até mais!', 'Não desamine, estude e volte depois ;)', 'info');
-            setTimeout(() => {
-              navigate('/stop');
               window.location.reload();
             }, "3000");
           }
+          navigate('/stop');
         });
       }
       else if((props.position[0] === 320 && props.position[1] === 448)) {
