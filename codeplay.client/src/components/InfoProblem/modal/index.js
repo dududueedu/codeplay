@@ -66,7 +66,7 @@ export function ModalBook(){
         confirmButtonColor: '#98be23',
         showLoaderOnConfirm: true,
         preConfirm: (response) => {
-          if(response === '4'){
+          if(response === '3'){
             Swal.fire({
               imageUrl: Star,
               imageWidth: 75,
