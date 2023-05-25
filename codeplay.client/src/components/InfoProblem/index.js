@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { listProblems } from '../../services/api'
 import { connect } from 'react-redux'
 import { dispatchProblem } from './dispatchProblem'
-import { EAST, QUEST, SOUTH, WEST, NORTH } from '../../config/gameConstants'
+import { QUEST, NORTH } from '../../config/gameConstants'
 import Swal from 'sweetalert2'
 import gameOver from '../../data/Map/game-over.png'
 import { ModalCans, ModalBook } from './modal'
@@ -33,16 +33,6 @@ function InfoProblem(props) {
 
   useEffect(() => {
     if(
-      (props.position[0] === 64 && props.position[1] === 96 && props.facing === EAST) ||
-      (props.position[0] === 96 && props.position[1] === 64 && props.facing === SOUTH) ||
-      (props.position[0] === 128 && props.position[1] === 64 && props.facing === SOUTH)||
-      (props.position[0] === 160 && props.position[1] === 64 && props.facing === SOUTH)|| 
-      (props.position[0] === 192 && props.position[1] === 64 && props.facing === SOUTH)||
-      (props.position[0] === 96 && props.position[1] === 128 && props.facing === NORTH)||
-      (props.position[0] === 128 && props.position[1] === 128 && props.facing === NORTH)||
-      (props.position[0] === 160 && props.position[1] === 128 && props.facing === NORTH)||
-      (props.position[0] === 224 && props.position[1] === 96 && props.facing === WEST)||
-      (props.position[0] === 192 && props.position[1] === 128 && props.facing === NORTH)||
       (props.position[0] === 672 && props.position[1] === 160)||
       (props.position[0] === 288 && props.position[1] === 320)
     ) {
