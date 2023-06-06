@@ -11,6 +11,7 @@ import {
 import "./index.css";
 import { setTiles } from "./environment";
 import { connect } from "react-redux"
+import audio from '../../data/Map/audio/movement.mp3'
 
 function MapTile(props) {
   function getTileEvent(type) {
@@ -62,20 +63,23 @@ function checkChest(position) {
   checkChest(props.position);
 
   return (
-    <div
-      className="map"
-      style={{
-        position: "relative",
-        top: "0px",
-        left: "0px",
-        width: `${MAP_WIDTH}px`,
-        height: `${MAP_HEIGHT}px`,
-      }}
-    >
-      {props.tiles.map((row, index) => {
-        return <MapRow tiles={row} key={index} />;
-      })}
-    </div>
+    <>
+      <audio src={audio} autoPlay loop></audio>
+      <div
+        className="map"
+        style={{
+          position: "relative",
+          top: "0px",
+          left: "0px",
+          width: `${MAP_WIDTH}px`,
+          height: `${MAP_HEIGHT}px`,
+        }}
+      >
+        {props.tiles.map((row, index) => {
+          return <MapRow tiles={row} key={index} />;
+        })}
+      </div>
+    </>
   );
 }
 
