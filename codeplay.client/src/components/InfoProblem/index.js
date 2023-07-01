@@ -48,11 +48,8 @@ function InfoProblem(props) {
           confirmButtonText: 'Eita!',
         }).then((result) => {
           if (result.isConfirmed) {
-            setTimeout(() => {
-              window.location.reload();
-            }, "3000");
+            navigate('/stop');
           }
-          navigate('/stop');
         });
       }
       else if((props.position[0] === 320 && props.position[1] === 448)) {
