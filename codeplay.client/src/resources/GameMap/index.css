@@ -4,7 +4,7 @@
 }
 
 .map{
-    background-image: url('../../data/Map/map_game.png');
+    background-image: url('../../data/Map/game_map.png');
     border-radius: 10px;
     border: 1px solid rgb(255, 255, 255); 
 }
