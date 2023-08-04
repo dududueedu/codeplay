@@ -12,6 +12,7 @@ function ProblemCode(props) {
 
   const [code, setCode] = useState("");
   const currentProblem = props.problemId;
+  const [correctSolution, setCorrectSolution] = useState(0);
 
   async function handleCodeSubmission(e) {
     e.preventDefault()
@@ -35,6 +36,7 @@ function ProblemCode(props) {
         showCancelButton: false,
         confirmButtonText: 'Obrigado!'
       });
+      setCorrectSolution(correctSolution+1);
     } else {
       Swal.fire({
         imageUrl: Sad,
@@ -53,7 +55,7 @@ function ProblemCode(props) {
   return (
     <form onSubmit={handleCodeSubmission} id="form-problemcode">
       <div className="problemcode-container">
-        <div className="text-problem"><p className="text-problem-p"> CODEPLAY </p></div>
+        <div className="text-problem"><p className="text-problem-p"> CODEPLAY </p><div className="text-sm">PROBLEMAS RESOLVIDOS: <p className="text-s">{correctSolution}</p></div></div>
         <textarea
           value={code} 
           onChange={e => setCode(e.target.value)}
