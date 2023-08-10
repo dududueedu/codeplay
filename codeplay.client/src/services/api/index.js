@@ -9,12 +9,12 @@ export function listProblems() {
         })
     );
 }
-//observation
+
 export function submission(data){
     return (
         axios({
             method: "POST",
-            url: `http://localhost:27017/api/Submission`,
+            url: `https://cp-codeback.onrender.com/api/submission`,
             data: data,
             headers: { "token": "SUBMISSION." }
         })
