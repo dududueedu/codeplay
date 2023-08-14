@@ -6,14 +6,12 @@ function GameOver() {
     const navigate = useNavigate();
 
     const backpag =()=> {
-        setTimeout(() => {
-            window.location.reload();
-        }, "1000");
-        navigate('/');
+        navigate('/quizz');
+        window.location.reload();
     }
 
     const backpagOne =()=> {
-        navigate('/home');
+        navigate('/');
     }
 
     return (

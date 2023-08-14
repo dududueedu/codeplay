@@ -1,0 +1,49 @@
+.container_home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.space_home {
+    display: flex;
+    position: relative;
+    background-color: #FFF;
+    height: 220px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.btn_gameplay_home{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.btn-home {
+    width: 90%;
+    justify-content: center;
+    margin: 170px 0px 0px 210px;
+    display: flex;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #008CCC;
+    color: rgb(245, 242, 242);
+}
+  
+button:hover{
+    background-color: #008bccd8;
+}
+
+.text-home{
+    position: absolute;
+    display: flex;
+    margin: 20px 0px 0px 100px;
+    color: #008bccd8;
+    font-size: x-large;
+    font-weight: bold;
+}
