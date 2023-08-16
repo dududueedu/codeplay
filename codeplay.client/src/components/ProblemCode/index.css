@@ -17,6 +17,7 @@
 
 .textarea-problem {
     background-color: #F8F8FC;
+    margin-left: 20px;
     border: none;
     outline: 0;
     min-width: 360px;
@@ -50,7 +51,7 @@
 
 .input-problem:hover{
     background-color: #008bccd8;
-  }
+}
 
 .btn-problem {
     height: 40px;
@@ -73,23 +74,9 @@
     margin-bottom: 20px;
 }
 
-.text-problem-p {
-    margin: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: xx-large;
-    color: rgba(152, 190, 35);
-}
-
 .text-sm {
-    margin: 15px 0px 10px 70px;
+    margin: 25px 0px 20px 0px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(156, 147, 147);
-}
-
-.text-s {
-    margin: 0px 0px 0px 50px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    color: rgba(152, 190, 35);
 }

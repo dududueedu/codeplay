@@ -55,7 +55,7 @@ function ProblemCode(props) {
   return (
     <form onSubmit={handleCodeSubmission} id="form-problemcode">
       <div className="problemcode-container">
-        <div className="text-problem"><p className="text-problem-p"> CODEPLAY </p><div className="text-sm">PROBLEMAS RESOLVIDOS: <p className="text-s">{correctSolution}</p></div></div>
+        <div className="text-problem"><div className="text-sm">PROBLEMAS RESOLVIDOS: {correctSolution} </div></div>
         <textarea
           value={code} 
           onChange={e => setCode(e.target.value)}
