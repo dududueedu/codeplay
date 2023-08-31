@@ -1,13 +1,25 @@
 import "./index.css"
 import { useNavigate } from 'react-router-dom' 
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
-
+import Swal from 'sweetalert2'
 
 function Home() {
     const navigate = useNavigate();
 
     const upQuizz =()=> {
-        navigate('/quizz');
+        Swal.fire({
+            imageWidth: 75,
+            imageHeight: 75,
+            color: '#141313',
+            title: 'AVISO',
+            text: 'Aqui você passará por um teste de conhecimento. Logo após, se obter 7 ou mais acertos, passará para próxima fase.',
+            confirmButtonColor: '#008CCC',
+            showCancelButton: false,
+            confirmButtonText: 'Avançar!'
+        });
+        setTimeout(function() {
+            navigate('/quizz')
+        }, 3000)
     }
 
     const [typewriter] = useTypewriter({
