@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Swal from 'sweetalert2'
 import Sad from '../../data/Quizz/sad.png'
 import Star from '../../data/Quizz/star.png'
-import Student from '../../data/Characters/Student.png'
 import { useNavigate } from 'react-router-dom'
 
 function Quizz() {
@@ -29,27 +28,6 @@ function Quizz() {
                 confirmButtonText: 'Obrigado, vamos lá!',
               }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire({
-                        imageWidth: 75,
-                        imageHeight: 75,
-                        color: '#141313',
-                        title: 'TUTORIAL',
-                        text: 'Arraste o cursor do mouse para dentro do mapa, click no botão esquerdo e utilize as setas do teclado para movimentar o personagem.',
-                        confirmButtonColor: '#98be23',
-                        showCancelButton: false,
-                        confirmButtonText: 'Ok!',
-                      }).then((result) => {
-                        if (result.isConfirmed) {
-                            Swal.fire({
-                                imageUrl: Student,
-                                text: 'O mapa tem cinco casas, em cada uma tem um desafio. Seu objetivo é resolver três desafios, tente evitar os inimigos, pois eles podem dificultar sua tragetória.',
-                                color: '#141313',
-                                showConfirmButton: true,
-                                confirmButtonColor: '#98be23',
-                                timer: 20000
-                            })
-                        }
-                      });
                       navigate('/codeplay');
                 }
               });
