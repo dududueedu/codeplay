@@ -34,19 +34,20 @@
 }
 
 .input-problem {
+    display: flex;
     height: 40px;
     width: 120px;
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 75px;
-    font: 600 16px Poppins;
     text-decoration: none;
     border: 0px solid #ffffff;
-    border-radius: 25px;
-    background-color: #98be23;
-    color: #ffffff;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    background-color: #008CCC;
+    color: rgb(245, 242, 242);
+    font-family: 'poppins', sans-serif;
     font-size: large;
+    justify-content: center;
 }
 
 .input-problem:hover{
@@ -54,18 +55,18 @@
 }
 
 .btn-problem {
+    display: flex;
     height: 40px;
     width: 120px;
     margin-top: 20px;
-    font: 600 16px Poppins;
     text-decoration: none;
     border: 0px solid #ffffff;
-    border-radius: 25px;
-    background-color: #98be23;
-    color: #ffffff;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    background-color: #008CCC;
+    color: rgb(245, 242, 242);
+    font-family: 'poppins', sans-serif;
     font-size: large;
-    padding-left: 27px;
+    justify-content: center;
 }
 
 .text-problem {

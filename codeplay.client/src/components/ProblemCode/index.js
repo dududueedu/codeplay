@@ -66,14 +66,15 @@ function ProblemCode(props) {
           className="textarea-problem"
         />
         <div className="area-btn">
-          <input
+          <button
             type="button"
             onClick={() => setCode("")}
             className="input-problem"
-            value="LIMPAR"
-          />
+          >
+            <span>LIMPAR</span>
+          </button>
           <button type="submit" value="enviar" className="btn-problem">
-            ENVIAR
+            <span>ENVIAR</span>
           </button>
         </div>
       </div>
