@@ -103,3 +103,13 @@ h1 {
   color: rgb(255, 255, 255);
   margin-top: 20px;
 }
+
+.btn-back{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  margin-left: 40%;
+  margin-top: 90vh;
+}

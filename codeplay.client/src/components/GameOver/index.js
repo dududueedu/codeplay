@@ -6,7 +6,7 @@ function GameOver() {
     const navigate = useNavigate();
 
     const backpag =()=> {
-        navigate('/quizz');
+        navigate('/codeplay');
         window.location.reload();
     }
 

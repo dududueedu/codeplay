@@ -80,6 +80,11 @@ function Quizz() {
         }
     }
 
+    const backpag =()=> {
+        navigate('/');
+        window.location.reload();
+    }
+
     const renderQuest = () => {
         return (
             <>
@@ -100,6 +105,7 @@ function Quizz() {
                             <div className="answers"><button onClick={callanswerOp3}>{currentQuestion.answers.option3}</button></div>
                         </div>
                     </main>
+                    {currentIndex === 9 && (<button className="btn-back" onClick={backpag}>Voltar</button>)}
             </div>
             </>
         );
