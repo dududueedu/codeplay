@@ -5,14 +5,33 @@ import { connect } from 'react-redux'
 import Swal from 'sweetalert2'
 import Star from '../../data/Quizz/star.png'
 import Sad from '../../data/Quizz/sad.png'
+import trophy from '../../data/Characters/trophy.png'
+import { useNavigate } from 'react-router-dom'
 
 function ProblemCode(props) {
+
+  const navigate = useNavigate();
+
   const infoPlaceholder =
     "INSTRUÇÕES:\n- Use input(), sem nenhum valor entre os parênteses, para fazer uma leitura do teclado. Ex: int(input()) para ler um número e convertê-lo para inteiro.\n\n- Seu programa não deve conter acentos e as saídas devem seguir o padrão exibido em SAÍDA.";
 
   const [code, setCode] = useState("");
+  const [codeAdditional, setCodeAdditional] = useState("");
   const currentProblem = props.problemId;
   const [correctSolution, setCorrectSolution] = useState(0);
+
+  if(correctSolution === 3) {
+    Swal.fire({
+      title: 'PARABÉNS, VOCÊ VENCEU!!!',
+      imageUrl: trophy,
+      imageWidth: 75,
+      imageHeight: 75,
+      confirmButtonColor: '#98be23',
+      padding: '3em',
+      color: '#98be23'
+    })
+    navigate('/')
+  }
 
   async function handleCodeSubmission(e) {
     e.preventDefault()
@@ -21,34 +40,50 @@ function ProblemCode(props) {
       codeInput: code,  
       problem_id: currentProblem.id
     }
+    setCodeAdditional(code);
 
     const response = await submission(jsonData);
     const submissionResult = response.data
-    if (submissionResult.result === 'true') {
-      Swal.fire({
-        imageUrl: Star,
-        imageWidth: 75,
-        imageHeight: 75,
-        color: '#98be23',
-        title: 'PARABÉNS!',
-        text: 'Sua solução foi aprovada!',
-        confirmButtonColor: '#98be23',
-        showCancelButton: false,
-        confirmButtonText: 'Obrigado!'
-      });
-      setCorrectSolution(correctSolution+1);
-    } else {
+
+    if(codeAdditional === code){
       Swal.fire({
         imageUrl: Sad,
         imageWidth: 75,
         imageHeight: 75,
         color: '#ff0000',
         title: 'ERRO',
-        text: 'Dica:\n\n'+submissionResult.error,
+        text: 'Dica:\n\n Você está inserindo o mesmo código, isso não contabiliza seus pontos!',
         confirmButtonColor: '#98be23',
         showCancelButton: false,
         confirmButtonText: 'Poxa',
       });
+    } else {
+        if (submissionResult.result === 'true') {
+          Swal.fire({
+            imageUrl: Star,
+            imageWidth: 75,
+            imageHeight: 75,
+            color: '#98be23',
+            title: 'PARABÉNS!',
+            text: 'Sua solução foi aprovada!',
+            confirmButtonColor: '#98be23',
+            showCancelButton: false,
+            confirmButtonText: 'Obrigado!'
+          });
+          setCorrectSolution(correctSolution+1);
+        } else {
+          Swal.fire({
+            imageUrl: Sad,
+            imageWidth: 75,
+            imageHeight: 75,
+            color: '#ff0000',
+            title: 'ERRO',
+            text: 'Dica:\n\n'+submissionResult.error,
+            confirmButtonColor: '#98be23',
+            showCancelButton: false,
+            confirmButtonText: 'Poxa',
+          });
+        }
     }
   }
 
