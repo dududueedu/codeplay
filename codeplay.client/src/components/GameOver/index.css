@@ -1,6 +1,6 @@
 .container_go {
     background-image: url("/src/data/Map/gameBack.png");
-    width: 10s0vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
