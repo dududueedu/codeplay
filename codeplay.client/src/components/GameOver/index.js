@@ -7,7 +7,6 @@ function GameOver() {
 
     const backpag =()=> {
         navigate('/codeplay');
-        window.location.reload();
     }
 
     const backpagOne =()=> {

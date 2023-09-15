@@ -49,6 +49,7 @@ function InfoProblem(props) {
         }).then((result) => {
           if (result.isConfirmed) {
             navigate('/stop');
+            window.location.reload();
           }
         });
       }
