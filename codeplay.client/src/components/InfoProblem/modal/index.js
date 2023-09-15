@@ -41,10 +41,11 @@ export function ModalCans(){
               confirmButtonColor: '#98be23',
               showCancelButton: false,
               confirmButtonText: 'Ok!',
-            })
-            setTimeout(() => {
-              window.location.reload();
-            }, "5000");
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.reload();
+              }
+            });
           }
         },
     })
@@ -87,10 +88,11 @@ export function ModalBook(){
               confirmButtonColor: '#98be23',
               showCancelButton: false,
               confirmButtonText: 'Ok!',
-            })
-            setTimeout(() => {
-              window.location.reload();
-            }, "5000");
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.reload();
+              }
+            });
           }
         },
     })
