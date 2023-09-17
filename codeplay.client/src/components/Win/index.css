@@ -1,4 +1,4 @@
-.container_go {
+.container_win {
     background-image: url("/src/data/Map/gameBack.png");
     width: 100vw;
     height: 100vh;
@@ -8,28 +8,17 @@
     align-items: center;
 }
 
-.gamer-over {
+.gamer-win {
     display: flex;
     position: relative;
-    justify-content: center;
-    align-items: center;
     background-color: #FFF;
     height: 300px;
     width: 560px;
     border-radius: 10px;
     border-color: #000000;
     border-style: ridge;
-}
-
-.btn-go {
-    width: 90%;
-    padding: 7px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #008CCC;
-    color: rgb(245, 242, 242);
-    margin: 0px 0px 0px 20px;
+    justify-content: center;
+    align-items: center;
 }
   
 button:hover{
@@ -37,25 +26,25 @@ button:hover{
 }
 
 .btn_gameplay{
-    margin: 160px 0px 0px 50px;
+    margin: 210px 0px 0px 0px;
 }
 
-.textgo{
+.textWin{
     position: absolute;
     display: flex;
-    margin: 10px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
     color: #dc3741;
-    font-size: 60px;
+    font-size: 35px;
     font-weight: bold;
     user-select: none;
     text-shadow: 
     -1px -1px 0px #000000, 
     -1px 1px 0px #FFF,                    
-     4px -1px 0px #000000,                  
-     1px 0px 0px #FFF;
+     2px -1px 2px #000000,                  
+     1px 0px 2px #FFF;
 }
 
-.imgGo{
+.imgWin{
     display: flex;
     position: absolute;
     height: 100px;

@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import Swal from 'sweetalert2'
 import Star from '../../data/Quizz/star.png'
 import Sad from '../../data/Quizz/sad.png'
-import trophy from '../../data/Characters/trophy.png'
 import { useNavigate } from 'react-router-dom'
 
 function ProblemCode(props) {
@@ -20,18 +19,25 @@ function ProblemCode(props) {
   const currentProblem = props.problemId;
   const [correctSolution, setCorrectSolution] = useState(0);
 
-  if(correctSolution === 3) {
-    Swal.fire({
-      title: 'PARABÉNS, VOCÊ VENCEU!!!',
-      imageUrl: trophy,
-      imageWidth: 75,
-      imageHeight: 75,
-      confirmButtonColor: '#98be23',
-      padding: '3em',
-      color: '#98be23'
-    })
-    navigate('/')
-  }
+  const verifSolution =()=>{
+      Swal.fire({
+        imageUrl: Star,
+        imageWidth: 75,
+        imageHeight: 75,
+        color: '#98be23',
+        title: 'PARABÉNS!',
+        text: 'Sua solução foi aprovada!',
+        confirmButtonColor: '#98be23',
+        showCancelButton: false,
+        confirmButtonText: 'Obrigado!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          if(correctSolution+1 === 3) {
+            navigate('/win');
+          }
+        }
+      });
+    }
 
   async function handleCodeSubmission(e) {
     e.preventDefault()
@@ -59,18 +65,8 @@ function ProblemCode(props) {
       });
     } else {
         if (submissionResult.result === 'true') {
-          Swal.fire({
-            imageUrl: Star,
-            imageWidth: 75,
-            imageHeight: 75,
-            color: '#98be23',
-            title: 'PARABÉNS!',
-            text: 'Sua solução foi aprovada!',
-            confirmButtonColor: '#98be23',
-            showCancelButton: false,
-            confirmButtonText: 'Obrigado!'
-          });
           setCorrectSolution(correctSolution+1);
+          verifSolution();
         } else {
           Swal.fire({
             imageUrl: Sad,
