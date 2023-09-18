@@ -41,6 +41,8 @@ function ProblemCode(props) {
         }).then((result) => {
           if (result.isConfirmed) {
             navigate('/stop');
+            props.position[0] = 32;
+            props.position[1] = 32;
           }
         });
       }
