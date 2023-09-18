@@ -82,7 +82,6 @@ function Quizz() {
 
     const backpag =()=> {
         navigate('/');
-        window.location.reload();
     }
 
     const renderQuest = () => {
