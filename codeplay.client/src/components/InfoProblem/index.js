@@ -4,10 +4,6 @@ import { listProblems } from '../../services/api'
 import { connect } from 'react-redux'
 import { dispatchProblem } from './dispatchProblem'
 import { QUEST, NORTH } from '../../config/gameConstants'
-import Swal from 'sweetalert2'
-import gameOver from '../../data/Map/game-over.png'
-import { ModalCans, ModalBook } from './modal'
-import { useNavigate } from 'react-router-dom'
 
 function InfoProblem(props) {
 
@@ -21,7 +17,6 @@ function InfoProblem(props) {
 
   const [currentQuest, setCurrentQuest] = useState(initialState);
   const [questList, setQuestList] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     listProblems().then(res => {
@@ -30,36 +25,6 @@ function InfoProblem(props) {
       console.log(error);
     });
   }, [])
-
-  useEffect(() => {
-    if(
-      (props.position[0] === 672 && props.position[1] === 160)||
-      (props.position[0] === 288 && props.position[1] === 320)
-    ) {
-        Swal.fire({
-          imageUrl: gameOver,
-          imageWidth: 75,
-          imageHeight: 75,
-          color: '#dc3741',
-          title: 'Você não poderia colidir com o inimigo',
-          showDenyButton: false,
-          confirmButtonColor: '#98be23',
-          showCancelButton: false,
-          confirmButtonText: 'Eita!',
-        }).then((result) => {
-          if (result.isConfirmed) {
-            navigate('/stop');
-            window.location.reload();
-          }
-        });
-      }
-      else if((props.position[0] === 320 && props.position[1] === 448)) {
-        ModalCans();
-      }
-      else if((props.position[0] === 832 && props.position[1] === 352)) {
-        ModalBook();
-      }
-  }, [props, navigate])
 
   useEffect(() => {
     let currentProblem = null;

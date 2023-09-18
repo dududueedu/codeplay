@@ -6,6 +6,10 @@ import Swal from 'sweetalert2'
 import Star from '../../data/Quizz/star.png'
 import Sad from '../../data/Quizz/sad.png'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import gameOver from '../../data/Map/game-over.png'
+import cans from '../../data/Quizz/cans.png'
+import book from '../../data/Quizz/book.png'
 
 function ProblemCode(props) {
 
@@ -18,6 +22,116 @@ function ProblemCode(props) {
   const [codeAdditional, setCodeAdditional] = useState("");
   const currentProblem = props.problemId;
   const [correctSolution, setCorrectSolution] = useState(0);
+
+  useEffect(() => {
+    if(
+      (props.position[0] === 672 && props.position[1] === 160)||
+      (props.position[0] === 288 && props.position[1] === 320)
+    ) {
+        Swal.fire({
+          imageUrl: gameOver,
+          imageWidth: 75,
+          imageHeight: 75,
+          color: '#dc3741',
+          title: 'Você não poderia colidir com o inimigo',
+          showDenyButton: false,
+          confirmButtonColor: '#98be23',
+          showCancelButton: false,
+          confirmButtonText: 'Eita!',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            navigate('/stop');
+          }
+        });
+      }
+      else if((props.position[0] === 320 && props.position[1] === 448)) {
+        Swal.fire({
+          text: 'Quantos latas são necessárias para construir uma pilha de latas no formato acima que tenha a altura de cinco latas?',
+          imageUrl: cans,
+          imageWidth: 500,
+          imageHeight: 200,
+          imageAlt: 'CANS image',
+          input: 'text',
+          inputAttributes: { autocapitalize: 'off' },
+          showCancelButton: false,
+          confirmButtonText: 'ENVIAR',
+          confirmButtonColor: '#98be23',
+          showLoaderOnConfirm: true,
+          preConfirm: (response) => {
+            if(response === '15'){
+              Swal.fire({
+                imageUrl: Star,
+                imageWidth: 75,
+                imageHeight: 75,
+                color: '#98be23',
+                title: 'Parabéns! Você acertou.',
+                confirmButtonColor: '#98be23',
+                showCancelButton: false,
+                confirmButtonText: 'Ok!',
+                })
+            }else{
+              Swal.fire({
+                imageUrl: Sad,
+                imageWidth: 75,
+                imageHeight: 75,
+                color: '#dc3741',
+                title: 'Não foi dessa vez!',
+                text: 'Caso tenha resolvido algum problema, terá sua pontuação zerada.',
+                confirmButtonColor: '#98be23',
+                showCancelButton: false,
+                confirmButtonText: 'Ok!',
+              }).then((result) => {
+                if (result.isConfirmed) setCorrectSolution(0)
+              });
+            }
+          },
+        })
+      }
+      else if((props.position[0] === 832 && props.position[1] === 352)) {
+        Swal.fire({
+          text: 'Maike com raiva da professora, descontou no livro de Lógica e rasgou as páginas 9, 10, 100, 111, 112. Quantas folhas ele rasgou?',
+          imageUrl: book,
+          imageWidth: 200,
+          imageHeight: 200,
+          imageAlt: 'BOOK image',
+          input: 'text',
+          inputAttributes: { autocapitalize: 'off' },
+          showCancelButton: false,
+          confirmButtonText: 'ENVIAR',
+          confirmButtonColor: '#98be23',
+          showLoaderOnConfirm: true,
+          preConfirm: (response) => {
+            if(response === '3'){
+              Swal.fire({
+                imageUrl: Star,
+                imageWidth: 75,
+                imageHeight: 75,
+                color: '#98be23',
+                title: 'Parabéns! Você acertou.',
+                confirmButtonColor: '#98be23',
+                showCancelButton: false,
+                confirmButtonText: 'Ok!',
+                })
+            }else{
+              Swal.fire({
+                imageUrl: Sad,
+                imageWidth: 75,
+                imageHeight: 75,
+                color: '#dc3741',
+                title: 'Não foi dessa vez!',
+                text: 'Caso tenha resolvido algum problema, terá sua pontuação zerada.',
+                confirmButtonColor: '#98be23',
+                showCancelButton: false,
+                confirmButtonText: 'Ok!',
+              }).then((result) => {
+                if (result.isConfirmed) setCorrectSolution(0)
+              });
+            }
+          },
+        })
+      }
+  }, [props, navigate])
+
 
   const verifSolution =()=>{
       Swal.fire({
